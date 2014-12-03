@@ -1,0 +1,11 @@
+--- cmake-3.1.0/bootstrap~	2014-12-15 15:07:45.000000000 -0500
++++ cmake-3.1.0/bootstrap	2014-12-29 23:35:37.791684522 -0500
+@@ -653,7 +653,7 @@
+   --verbose) cmake_verbose=TRUE ;;
+   --enable-ccache) cmake_ccache_enabled=TRUE ;;
+   --) shift; break ;;
+-  *) die "Unknown option: $1" ;;
++  *) echo -n "" ;;
+   esac
+   shift
+ done
