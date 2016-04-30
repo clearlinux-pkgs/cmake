@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.1.3
-Release  : 15
+Release  : 16
 URL      : http://www.cmake.org/files/v3.1/cmake-3.1.3.tar.gz
 Source0  : http://www.cmake.org/files/v3.1/cmake-3.1.3.tar.gz
 Summary  : General purpose data compression library
