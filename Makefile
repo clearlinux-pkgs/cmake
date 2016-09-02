@@ -1,4 +1,5 @@
 PKG_NAME := cmake
-URL := http://www.cmake.org/files/v3.1/cmake-3.1.3.tar.gz
+URL := https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
+ARCHIVES :=
 
 include ../common/Makefile.common
