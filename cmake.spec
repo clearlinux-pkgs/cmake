@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.6.1
-Release  : 18
+Release  : 19
 URL      : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Source0  : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Summary  : General purpose data compression library
