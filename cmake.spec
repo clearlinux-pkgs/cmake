@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.6.1
-Release  : 21
+Release  : 22
 URL      : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Source0  : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Summary  : General purpose data compression library
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause BSD-4-Clause-UC GPL-2.0 MIT Zlib bzip2-1.0.5
 Requires: cmake-bin
 BuildRequires : cmake
+BuildRequires : cmake-dev
 BuildRequires : pkgconfig(expat)
 Patch1: build.patch
 
