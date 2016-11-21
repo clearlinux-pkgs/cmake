@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.6.1
-Release  : 22
+Release  : 23
 URL      : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Source0  : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Summary  : General purpose data compression library
@@ -14,6 +14,7 @@ Requires: cmake-bin
 BuildRequires : cmake
 BuildRequires : cmake-dev
 BuildRequires : pkgconfig(expat)
+BuildRequires : curl-dev
 Patch1: build.patch
 
 %description
@@ -46,7 +47,7 @@ dev components for the cmake package.
 export LANG=C
 mkdir clr-build
 pushd clr-build
-cmake .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS:BOOL=ON -DLIB_INSTALL_DIR:PATH=%{_libdir} -DCMAKE_AR=/usr/bin/gcc-ar -DCMAKE_RANLIB=/usr/bin/gcc-ranlib -DCMAKE_USE_SYSTEM_EXPAT=ON
+cmake .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS:BOOL=ON -DLIB_INSTALL_DIR:PATH=%{_libdir} -DCMAKE_AR=/usr/bin/gcc-ar -DCMAKE_RANLIB=/usr/bin/gcc-ranlib -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on
 make VERBOSE=1  %{?_smp_mflags}
 popd
 
