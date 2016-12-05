@@ -3,3 +3,4 @@
 # desirable. One name per line, no whitespace.
 #
 expat
+libcurl

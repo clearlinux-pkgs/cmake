@@ -4,17 +4,18 @@
 #
 Name     : cmake
 Version  : 3.6.1
-Release  : 23
+Release  : 24
 URL      : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Source0  : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Summary  : General purpose data compression library
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause BSD-4-Clause-UC GPL-2.0 MIT Zlib bzip2-1.0.5
 Requires: cmake-bin
+Requires: cmake-data
 BuildRequires : cmake
 BuildRequires : cmake-dev
 BuildRequires : pkgconfig(expat)
-BuildRequires : curl-dev
+BuildRequires : pkgconfig(libcurl)
 Patch1: build.patch
 
 %description
@@ -24,15 +25,25 @@ expected git commit:
 %package bin
 Summary: bin components for the cmake package.
 Group: Binaries
+Requires: cmake-data
 
 %description bin
 bin components for the cmake package.
+
+
+%package data
+Summary: data components for the cmake package.
+Group: Data
+
+%description data
+data components for the cmake package.
 
 
 %package dev
 Summary: dev components for the cmake package.
 Group: Development
 Requires: cmake-bin
+Requires: cmake-data
 Provides: cmake-devel
 
 %description dev
@@ -68,11 +79,9 @@ popd
 %defattr(-,root,root,-)
 /usr/doc/cmake-3.6/Copyright.txt
 /usr/doc/cmake-3.6/cmcompress/Copyright.txt
-/usr/doc/cmake-3.6/cmcurl/COPYING
 /usr/doc/cmake-3.6/cmlibarchive/COPYING
 /usr/doc/cmake-3.6/cmliblzma/COPYING
 /usr/doc/cmake-3.6/cmsys/Copyright.txt
-/usr/doc/cmake-3.6/cmzlib/Copyright.txt
 
 %files bin
 %defattr(-,root,root,-)
@@ -80,7 +89,10 @@ popd
 /usr/bin/cpack
 /usr/bin/ctest
 
+%files data
+%defattr(-,root,root,-)
+/usr/share/cmake-*/*
+
 %files dev
 %defattr(-,root,root,-)
 /usr/share/aclocal/*.m4
-/usr/share/cmake-3.6/*
