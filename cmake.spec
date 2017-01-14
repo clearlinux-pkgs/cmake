@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.6.1
-Release  : 25
+Release  : 26
 URL      : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Source0  : https://cmake.org/files/v3.6/cmake-3.6.1.tar.gz
 Summary  : General purpose data compression library
@@ -15,6 +15,7 @@ Requires: cmake-data
 BuildRequires : cmake
 BuildRequires : pkgconfig(expat)
 BuildRequires : pkgconfig(libcurl)
+BuildRequires : zlib-dev
 Patch1: build.patch
 
 %description
@@ -57,16 +58,9 @@ dev components for the cmake package.
 export LANG=C
 mkdir clr-build
 pushd clr-build
-cmake .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS:BOOL=ON -DLIB_INSTALL_DIR:PATH=%{_libdir} -DCMAKE_AR=/usr/bin/gcc-ar -DCMAKE_RANLIB=/usr/bin/gcc-ranlib -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on
+cmake .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS:BOOL=ON -DLIB_INSTALL_DIR:PATH=%{_libdir} -DCMAKE_AR=/usr/bin/gcc-ar -DLIB_SUFFIX=64 -DCMAKE_RANLIB=/usr/bin/gcc-ranlib -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on
 make VERBOSE=1  %{?_smp_mflags}
 popd
-
-%check
-export LANG=C
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
-pushd clr-build ; make test ||: ; popd
 
 %install
 rm -rf %{buildroot}
