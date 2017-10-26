@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.9.4
-Release  : 31
+Release  : 32
 URL      : https://cmake.org/files/v3.9/cmake-3.9.4.tar.gz
 Source0  : https://cmake.org/files/v3.9/cmake-3.9.4.tar.gz
 Summary  : General purpose data compression library
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1509025380
+export SOURCE_DATE_EPOCH=1509060006
 mkdir clr-build
 pushd clr-build
 cmake .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS:BOOL=ON -DLIB_INSTALL_DIR:PATH=/usr/lib64 -DCMAKE_AR=/usr/bin/gcc-ar -DLIB_SUFFIX=64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_RANLIB=/usr/bin/gcc-ranlib -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on
@@ -72,7 +72,7 @@ make VERBOSE=1  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1509025380
+export SOURCE_DATE_EPOCH=1509060006
 rm -rf %{buildroot}
 pushd clr-build
 %make_install
@@ -80,7 +80,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-/
 /usr/doc/cmake-3.9/Copyright.txt
 /usr/doc/cmake-3.9/cmcompress/Copyright.txt
 /usr/doc/cmake-3.9/cmlibarchive/COPYING
