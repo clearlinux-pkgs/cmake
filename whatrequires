@@ -74,6 +74,7 @@ bind-utils
 binutils
 bison
 bzip2
+c-ares
 ca-certs
 ca-certs-static
 cairo
@@ -88,12 +89,14 @@ clear-containers-agent
 clear-containers-proxy
 clear-containers-runtime
 clear-containers-shim
+clr-boot-manager
 clr-systemd-config
 clutter
 clutter-gst
 clutter-gtk
 cmake
 cni
+cni-plugins
 cogl
 colord
 colord-gtk
@@ -101,6 +104,7 @@ comedilib
 compat-SDL2-soname1
 compat-glew-soname1
 compat-guile-soname20
+compat-libical-soname2
 compat-libpng-soname12
 compat-llvm-soname4
 compat-opencv-soname32
@@ -113,7 +117,8 @@ cppcheck
 cppunit
 cracklib
 createrepo_c
-cryptsetup
+cri-o
+cri-tools
 cscope
 cups-pk-helper
 curl
@@ -128,6 +133,7 @@ dialog
 diffoscope
 diffstat
 dnf
+dnf-plugins-core
 docker
 double-conversion
 doxygen
@@ -138,6 +144,7 @@ elasticsearch
 elfutils
 eog
 eog-plugins
+evince
 evolution
 evolution-data-server
 evolution-ews
@@ -225,6 +232,7 @@ gpgme
 gpredict
 gradle
 graphviz
+grig
 grilo
 grilo-plugins
 groff
@@ -340,6 +348,7 @@ libthai
 libuser
 libvirt
 libvirt-glib
+libvpx
 libwacom
 libwnck
 libwnck3
@@ -379,7 +388,9 @@ mock
 moka-icon-theme
 mosh
 motif
+mozjs
 mozjs38
+multimon-ng
 murrine
 mutt
 mutter
@@ -402,6 +413,7 @@ notebook
 nrpe
 nss
 numactl
+numba
 numpy
 nvml
 ocl-icd
@@ -419,6 +431,7 @@ openssh
 openvpn
 openvswitch
 opus
+opusfile
 orc
 ostree
 p7zip
@@ -438,7 +451,6 @@ popt
 portaudio
 postgresql
 powertop
-procenv
 processor-trace
 procps-ng
 prompt_toolkit
@@ -452,8 +464,8 @@ pycurl
 pytest-cov
 python
 python-magic
-python-tappy
 python3
+pyzmq
 qemu
 qemu-lite
 qt-everywhere-opensource-src
@@ -465,6 +477,7 @@ recordproto
 requests
 rest
 rpm
+rsync
 ruby
 runc
 rustc
@@ -482,6 +495,7 @@ shim
 smart_open
 snappy
 source-highlight
+sox
 spice
 spice-gtk
 sqlite-autoconf
@@ -502,8 +516,10 @@ terminus-font
 texinfo
 tflearn
 thermal_daemon
+thin-provisioning-tools
 thunderbolt-software-user-space
 tigervnc
+time
 tiptop
 tk
 totem
@@ -518,6 +534,7 @@ uwsgi
 v4l-utils
 vinagre
 virt-viewer
+vlc
 vte
 vulkan-sdk
 wayland
@@ -525,6 +542,7 @@ webkitgtk
 websockify
 weston
 wget
+wol
 xastir
 xcb-proto
 xcb-util
@@ -541,6 +559,7 @@ xfce4-whiskermenu-plugin
 xfconf
 xkbcomp
 xkeyboard-config
+xlog
 xmlto
 xorg-server
 xproto
