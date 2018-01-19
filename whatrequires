@@ -9,6 +9,7 @@ ModemManager
 NetworkManager
 NetworkManager-openconnect
 OpenSP
+PyQt5
 PyWavelets
 Pygments
 R
@@ -24,7 +25,6 @@ R-git2r
 R-gtools
 R-lme4
 R-lmtest
-R-microbenchmark
 R-multcomp
 R-munsell
 R-pbdZMQ
@@ -33,7 +33,7 @@ R-quantreg
 R-roxygen2
 R-sandwich
 R-scales
-R-tibble
+R-shiny
 R-tis
 SDL2
 SDL2_image
@@ -87,6 +87,7 @@ catkin
 ceph
 certbot
 cgdb
+cgit
 check
 cheese
 chrome-gnome-shell
@@ -108,12 +109,14 @@ colord
 colord-gtk
 comedilib
 compat-SDL2-soname1
+compat-gc-soname1
 compat-glew-soname1
 compat-guile-soname20
 compat-libical-soname2
 compat-libpng-soname12
 compat-llvm-soname4
 compat-opencv-soname32
+compat-opencv-soname33
 connman
 connman-gtk
 conntrack-tools
@@ -170,6 +173,7 @@ fio
 fish
 flac
 flatpak
+fldigi
 flex
 fltk
 fontconfig
@@ -206,6 +210,7 @@ glib
 glib-networking
 glibc
 glslang
+glusterfs
 gmic
 gmime
 gmp
@@ -295,6 +300,7 @@ json-glib
 jsoncpp
 jupyter
 jupyter-notebook-gist
+jupyter_client
 kbd
 kbproto
 kmod
@@ -360,6 +366,7 @@ libsolv
 libsoup
 libssh
 libssh2
+libstoragemgmt
 libtasn1
 libthai
 libuser
@@ -412,6 +419,7 @@ multimon-ng
 murrine
 mutt
 mutter
+mypy
 nagios-plugins
 nano
 nasm
@@ -434,6 +442,7 @@ nss
 numactl
 numba
 numpy
+numpydoc
 nvml
 ocl-icd
 open-lldp
@@ -442,7 +451,6 @@ openal-soft
 openconnect
 opencv
 openjdk
-openjpeg
 openldap
 openmpi
 opensm
@@ -471,6 +479,7 @@ popt
 portaudio
 postgresql
 powertop
+proc-macro2
 processor-trace
 procps-ng
 prompt_toolkit
@@ -512,12 +521,14 @@ setserial
 shared-mime-info
 sharutils
 shim
+sip
 smart_open
 snappy
 source-highlight
 sox
 spice
 spice-gtk
+spyder
 sqlite-autoconf
 sshfs
 sudo
@@ -538,6 +549,7 @@ tflearn
 thermal_daemon
 thin-provisioning-tools
 thunderbolt-software-user-space
+tiff
 tigervnc
 time
 tiptop
@@ -545,7 +557,9 @@ tk
 totem
 totem-pl-parser
 tracker
+udisks2
 uhttpmock
+unicode-xid
 upower
 urllib3
 usermode
@@ -556,6 +570,7 @@ vinagre
 virt-manager
 virt-viewer
 vlc
+volume_key
 vte
 vulkan-sdk
 wayland
