@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.10.2
-Release  : 37
+Release  : 38
 URL      : https://cmake.org/files/v3.10/cmake-3.10.2.tar.gz
 Source0  : https://cmake.org/files/v3.10/cmake-3.10.2.tar.gz
 Summary  : General purpose data compression library
