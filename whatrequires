@@ -266,6 +266,7 @@ dnf-plugins-core
 docker
 double-conversion
 doxygen
+dracut
 dstat
 e2fsprogs
 edk2
@@ -417,6 +418,7 @@ httpd
 hub
 hunspell
 hwloc
+hyperscan
 ibus
 icu4c
 indent
@@ -469,6 +471,7 @@ libcryptui
 libdatrie
 libdnf
 libdrm
+libepoxy
 libevdev
 libffi
 libgd
@@ -559,6 +562,7 @@ mosh
 motif
 mozjs
 mozjs38
+mozjs52
 multimon-ng
 murrine
 mutt
@@ -699,6 +703,7 @@ spice-gtk
 sqlite-autoconf
 sshfs
 sudo
+suricata
 swig
 sysdig
 syslinux
