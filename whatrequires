@@ -13,6 +13,7 @@ PyWavelets
 Pygments
 R
 R-AER
+R-DAAG
 R-DEoptim
 R-DEoptimR
 R-DT
@@ -26,6 +27,7 @@ R-ICS
 R-ICSNP
 R-IRkernel
 R-Lahman
+R-MCMCpack
 R-NMF
 R-PKI
 R-R6
@@ -45,9 +47,11 @@ R-bridgesampling
 R-brms
 R-broom
 R-car
+R-carData
 R-caret
 R-chron
 R-circlize
+R-clue
 R-coin
 R-colorspace
 R-colourpicker
@@ -86,10 +90,13 @@ R-ipred
 R-klaR
 R-labelled
 R-latticeExtra
+R-leaflet
 R-lfe
 R-libcoin
 R-lme4
 R-lmtest
+R-lsmeans
+R-manipulateWidget
 R-maxLik
 R-memisc
 R-mi
@@ -146,6 +153,8 @@ R-vcd
 R-vegan
 R-viridis
 R-visNetwork
+R-webshot
+Remmina
 SDL2
 SDL2_image
 Sphinx
@@ -197,6 +206,7 @@ c-ares
 ca-certs
 ca-certs-static
 cairo
+capnproto
 cargo
 caribou
 catch2
@@ -216,6 +226,7 @@ clear-containers-shim
 clr-boot-manager
 clr-init
 clr-systemd-config
+clucene-core
 clutter
 clutter-gst
 clutter-gtk
@@ -230,6 +241,7 @@ comedilib
 compat-SDL2-soname1
 compat-gegl
 compat-glew-soname1
+compat-gtksourceview-soname3
 compat-guile-soname20
 compat-libical-soname2
 compat-libpng-soname12
@@ -237,6 +249,7 @@ compat-llvm-soname4
 compat-llvm-soname5
 compat-opencv-soname32
 compat-opencv-soname33
+compat-protobuf-soname14
 connman
 connman-gtk
 conntrack-tools
@@ -268,6 +281,7 @@ double-conversion
 doxygen
 dracut
 dstat
+dtc
 e2fsprogs
 edk2
 efitools
@@ -416,6 +430,7 @@ hdf5
 hexchat
 httpd
 hub
+hugo
 hunspell
 hwloc
 hyperscan
@@ -441,6 +456,8 @@ jsoncpp
 jupyter
 jupyter-notebook-gist
 jupyter_client
+jupyterlab
+jupyterlab_launcher
 kbd
 kbproto
 kmod
@@ -469,6 +486,7 @@ libconfig
 libcroco
 libcryptui
 libdatrie
+libdazzle
 libdnf
 libdrm
 libepoxy
@@ -538,6 +556,7 @@ linux-hyperv-lts
 linux-hyperv-mini
 linux-kvm
 linux-lts
+linux-oracle
 linux-pk414
 linux-tools
 llvm
@@ -609,6 +628,7 @@ openvswitch
 opus
 opusfile
 orc
+orca
 ostree
 ovirt-guest-agent
 p7zip
@@ -616,6 +636,7 @@ pandas
 pango
 parameter-framework
 parted
+patch
 patchutils
 pavucontrol
 pciutils
@@ -677,9 +698,11 @@ recordproto
 requests
 rest
 rpm
+rr
 ruby
 runc
 rustc
+sane-backends
 satyr
 scikit-build
 scikit-image
@@ -692,6 +715,7 @@ shadow
 shared-mime-info
 sharutils
 shim
+simple-scan
 sip
 smart_open
 snappy
@@ -739,12 +763,14 @@ usermode
 util-linux
 uwsgi
 v4l-utils
+vala
 vinagre
 vino
 virt-manager
 virt-viewer
 vlc
 volume_key
+vorbis-tools
 vte
 vulkan-sdk
 wayland
@@ -762,6 +788,7 @@ xcb-util-image
 xcb-util-keysyms
 xcb-util-wm
 xcmiscproto
+xdg-desktop-portal
 xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils
