@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.11.1
-Release  : 41
+Release  : 42
 URL      : https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz
 Source0  : https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz
 Summary  : General purpose data compression library
