@@ -32,7 +32,6 @@ R-NMF
 R-PKI
 R-R6
 R-ROCR
-R-RcppProgress
 R-Rmpfr
 R-Rmpi
 R-StanHeaders
@@ -193,10 +192,10 @@ babl
 baobab
 bash
 bash-completion
+bash.static
 bash_kernel
 bc
 beignet
-bigreqsproto
 bind-utils
 binutils
 bison
@@ -240,6 +239,7 @@ colord-gtk
 comedilib
 compat-SDL2-soname1
 compat-gegl
+compat-gegl-0.3
 compat-glew-soname1
 compat-gtksourceview-soname3
 compat-guile-soname20
@@ -250,7 +250,7 @@ compat-llvm-soname5
 compat-opencv-soname32
 compat-opencv-soname33
 compat-protobuf-soname14
-connman
+confuse
 connman-gtk
 conntrack-tools
 containerd
@@ -282,6 +282,7 @@ doxygen
 dracut
 dstat
 dtc
+dyskctl
 e2fsprogs
 edk2
 efitools
@@ -314,10 +315,11 @@ flex
 fltk
 folks
 fontconfig
-fontsproto
 freeglut
 freetype
+fribidi
 fuse
+fwupd
 garcon
 gawk
 gc
@@ -438,7 +440,7 @@ ibus
 icu4c
 indent
 iniparse
-inputproto
+intel-gpu-tools
 invm-frameworks
 iproute2
 iptables
@@ -459,7 +461,6 @@ jupyter_client
 jupyterlab
 jupyterlab_launcher
 kbd
-kbproto
 kmod
 krb5
 kubernetes
@@ -490,6 +491,7 @@ libdazzle
 libdnf
 libdrm
 libepoxy
+libev
 libevdev
 libffi
 libgd
@@ -497,6 +499,7 @@ libgdata
 libgepub
 libgfortran-avx
 libgfortran-compat-soname3
+libgfortran-compat-soname4
 libgit2
 libglade
 libgnome-keyring
@@ -514,6 +517,7 @@ libjpeg-turbo
 libjpeg-turbo-soname8
 libksba
 libmediaart
+libmypaint
 libnice
 libnl
 libnotify
@@ -526,6 +530,8 @@ librepo
 librsvg
 librtlsdr
 libsecret
+libsmbios
+libsmi
 libsolv
 libsoup
 libssh
@@ -582,6 +588,7 @@ motif
 mozjs
 mozjs38
 mozjs52
+mpi4py
 multimon-ng
 murrine
 mutt
@@ -610,7 +617,7 @@ numactl
 numba
 numpy
 numpydoc
-nvml
+oath-toolkit
 ocl-icd
 open-lldp
 open-vm-tools
@@ -629,6 +636,7 @@ opus
 opusfile
 orc
 orca
+osinfo-db-tools
 ostree
 ovirt-guest-agent
 p7zip
@@ -645,8 +653,10 @@ php
 pidgin
 pidgin-sipe
 pkg-config
+pmdk
 polkit
 poppler
+poppler-data
 popt
 portaudio
 postgresql
@@ -694,8 +704,9 @@ quilt
 ragel
 rdma-core
 re2c
-recordproto
+redis-native
 requests
+requests-mock
 rest
 rpm
 rr
@@ -708,7 +719,6 @@ scikit-build
 scikit-image
 scikit-learn
 scipy
-scrnsaverproto
 seahorse
 setserial
 shadow
@@ -726,6 +736,7 @@ spice
 spice-gtk
 sqlite-autoconf
 sshfs
+subversion
 sudo
 suricata
 swig
@@ -770,7 +781,6 @@ virt-manager
 virt-viewer
 vlc
 volume_key
-vorbis-tools
 vte
 vulkan-sdk
 wayland
@@ -779,21 +789,23 @@ websockify
 weechat
 weston
 wget
+wireshark
 woff2
 wol
 xastir
 xcb-proto
 xcb-util
+xcb-util-cursor
 xcb-util-image
 xcb-util-keysyms
+xcb-util-renderutil
 xcb-util-wm
-xcmiscproto
+xcb-util-xrm
 xdg-desktop-portal
 xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils
 xemacs
-xextproto
 xf86-input-wacom
 xfce4-panel
 xfce4-whiskermenu-plugin
@@ -803,7 +815,7 @@ xkeyboard-config
 xlog
 xmlto
 xorg-server
-xproto
+xorgproto
 xscreensaver
 xtrans
 xz
