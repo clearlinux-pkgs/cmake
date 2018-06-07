@@ -3,6 +3,8 @@ Cython
 FreeRDP
 GConf
 Keras
+Keras_Applications
+Keras_Preprocessing
 LVM2
 Linux-PAM
 ModemManager
@@ -25,7 +27,6 @@ R-GGally
 R-Hmisc
 R-ICS
 R-ICSNP
-R-IRkernel
 R-Lahman
 R-MCMCpack
 R-NMF
@@ -65,7 +66,6 @@ R-doMPI
 R-doRNG
 R-drc
 R-dtw
-R-dygraphs
 R-dynlm
 R-fastcluster
 R-fitdistrplus
@@ -82,8 +82,6 @@ R-gmp
 R-gplots
 R-gridExtra
 R-gtools
-R-htmlTable
-R-htmlwidgets
 R-inum
 R-ipred
 R-klaR
@@ -99,15 +97,14 @@ R-manipulateWidget
 R-maxLik
 R-memisc
 R-mi
-R-miniUI
 R-modelr
 R-multcomp
 R-multiwayvcov
 R-munsell
 R-mvoutlier
+R-openxlsx
 R-party
 R-partykit
-R-pbdZMQ
 R-pbkrtest
 R-pcaPP
 R-pdfCluster
@@ -121,7 +118,7 @@ R-rasterVis
 R-recipes
 R-reprex
 R-rgl
-R-rmarkdown
+R-rio
 R-rms
 R-rngtools
 R-robCompositions
@@ -136,10 +133,7 @@ R-scales
 R-sem
 R-seriation
 R-sfsmisc
-R-shiny
-R-shinyjs
 R-shinystan
-R-shinythemes
 R-sna
 R-spdep
 R-strucchange
@@ -151,8 +145,6 @@ R-treatSens
 R-vcd
 R-vegan
 R-viridis
-R-visNetwork
-R-webshot
 Remmina
 SDL2
 SDL2_image
@@ -223,6 +215,7 @@ clear-containers-proxy
 clear-containers-runtime
 clear-containers-shim
 clr-boot-manager
+clr-desktop-defaults
 clr-init
 clr-systemd-config
 clucene-core
@@ -269,6 +262,7 @@ darktable
 dbus
 dbus-glib
 dconf
+dconf-editor
 dejagnu
 dfc
 dhcp
@@ -341,6 +335,7 @@ gevent
 gexiv2
 gfbgraph
 gflags
+gftp
 ghostscript
 gimp
 git
@@ -350,6 +345,7 @@ glew
 glib
 glib-networking
 glibc
+glmark2
 glslang
 glusterfs
 gmic
@@ -460,6 +456,10 @@ jupyter-notebook-gist
 jupyter_client
 jupyterlab
 jupyterlab_launcher
+kata-proxy
+kata-qemu-lite
+kata-runtime
+kata-shim
 kbd
 kmod
 krb5
@@ -516,6 +516,7 @@ libinput
 libjpeg-turbo
 libjpeg-turbo-soname8
 libksba
+libmbim
 libmediaart
 libmypaint
 libnice
@@ -526,6 +527,7 @@ libosinfo
 libpcap
 libpeas
 libpng
+libqmi
 librepo
 librsvg
 librtlsdr
@@ -540,6 +542,7 @@ libstoragemgmt
 libtasn1
 libthai
 libuser
+libva-intel-driver
 libvirt
 libvirt-glib
 libvpx
@@ -553,6 +556,7 @@ libxfce4util
 libxkbcommon
 libxklavier
 libzip
+libzmq
 linux
 linux-aws
 linux-container
@@ -579,6 +583,7 @@ mc
 mesa
 meson
 metacity
+metrics-discovery
 minetest
 mixer-tools
 mock
@@ -618,6 +623,7 @@ numba
 numpy
 numpydoc
 oath-toolkit
+ocaml
 ocl-icd
 open-lldp
 open-vm-tools
@@ -752,6 +758,7 @@ telepathy-logger
 tensorflow
 terminus-font
 texinfo
+texlive
 tflearn
 thermal_daemon
 thin-provisioning-tools
@@ -768,6 +775,7 @@ tracker-miners
 udisks2
 uhttpmock
 unicode-xid
+unison
 upower
 urllib3
 usermode
@@ -813,6 +821,7 @@ xfconf
 xkbcomp
 xkeyboard-config
 xlog
+xmlsec1
 xmlto
 xorg-server
 xorgproto
