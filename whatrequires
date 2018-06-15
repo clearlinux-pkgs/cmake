@@ -155,6 +155,7 @@ Z3
 abireport
 accountsservice
 acpica-unix2
+acrn-hypervisor
 adwaita-icon-theme
 aeon
 alsa-lib
@@ -564,6 +565,7 @@ linux-gce
 linux-hyperv
 linux-hyperv-lts
 linux-hyperv-mini
+linux-kata
 linux-kvm
 linux-lts
 linux-oracle
@@ -580,6 +582,7 @@ man-pages
 mariadb
 matplotlib
 mc
+meld
 mesa
 meson
 metacity
@@ -791,6 +794,7 @@ vlc
 volume_key
 vte
 vulkan-sdk
+waffle
 wayland
 webkitgtk
 websockify
