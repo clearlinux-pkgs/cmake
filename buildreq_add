@@ -6,3 +6,4 @@ ncurses-dev
 zlib-dev
 bzip2-dev
 xz-dev
+expat-dev
