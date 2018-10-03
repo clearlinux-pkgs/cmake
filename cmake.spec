@@ -4,16 +4,17 @@
 #
 Name     : cmake
 Version  : 3.12.3
-Release  : 51
+Release  : 52
 URL      : https://cmake.org/files/v3.12/cmake-3.12.3.tar.gz
 Source0  : https://cmake.org/files/v3.12/cmake-3.12.3.tar.gz
 Summary  : library that can create and read several streaming archive formats
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause BSD-4-Clause-UC GPL-2.0 MIT Zlib bzip2-1.0.5
-Requires: cmake-bin
-Requires: cmake-data
-Requires: cmake-license
+Requires: cmake-bin = %{version}-%{release}
+Requires: cmake-data = %{version}-%{release}
+Requires: cmake-license = %{version}-%{release}
 BuildRequires : SDL-dev
+BuildRequires : Vulkan-Headers-dev Vulkan-Loader-dev Vulkan-Tools
 BuildRequires : alsa-lib-dev
 BuildRequires : bash coreutils gzip
 BuildRequires : beignet-dev
@@ -73,7 +74,6 @@ BuildRequires : tcl
 BuildRequires : tcl-dev tk-dev
 BuildRequires : texlive
 BuildRequires : tiff-dev
-BuildRequires : vulkan-sdk-dev
 BuildRequires : wget
 BuildRequires : xz-dev
 BuildRequires : zlib-dev
@@ -115,14 +115,6 @@ Provides: cmake-devel = %{version}-%{release}
 dev components for the cmake package.
 
 
-%package doc
-Summary: doc components for the cmake package.
-Group: Documentation
-
-%description doc
-doc components for the cmake package.
-
-
 %package license
 Summary: license components for the cmake package.
 Group: Default
@@ -141,7 +133,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538588818
+export SOURCE_DATE_EPOCH=1538607453
 mkdir -p clr-build
 pushd clr-build
 %cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on
@@ -149,23 +141,23 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1538588818
+export SOURCE_DATE_EPOCH=1538607453
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/cmake
-cp Copyright.txt %{buildroot}/usr/share/doc/cmake/Copyright.txt
-cp Source/kwsys/Copyright.txt %{buildroot}/usr/share/doc/cmake/Source_kwsys_Copyright.txt
-cp Utilities/GitSetup/LICENSE %{buildroot}/usr/share/doc/cmake/Utilities_GitSetup_LICENSE
-cp Utilities/KWIML/Copyright.txt %{buildroot}/usr/share/doc/cmake/Utilities_KWIML_Copyright.txt
-cp Utilities/cmbzip2/LICENSE %{buildroot}/usr/share/doc/cmake/Utilities_cmbzip2_LICENSE
-cp Utilities/cmcompress/Copyright.txt %{buildroot}/usr/share/doc/cmake/Utilities_cmcompress_Copyright.txt
-cp Utilities/cmcurl/COPYING %{buildroot}/usr/share/doc/cmake/Utilities_cmcurl_COPYING
-cp Utilities/cmexpat/COPYING %{buildroot}/usr/share/doc/cmake/Utilities_cmexpat_COPYING
-cp Utilities/cmjsoncpp/LICENSE %{buildroot}/usr/share/doc/cmake/Utilities_cmjsoncpp_LICENSE
-cp Utilities/cmlibarchive/COPYING %{buildroot}/usr/share/doc/cmake/Utilities_cmlibarchive_COPYING
-cp Utilities/cmliblzma/COPYING %{buildroot}/usr/share/doc/cmake/Utilities_cmliblzma_COPYING
-cp Utilities/cmlibrhash/COPYING %{buildroot}/usr/share/doc/cmake/Utilities_cmlibrhash_COPYING
-cp Utilities/cmlibuv/LICENSE %{buildroot}/usr/share/doc/cmake/Utilities_cmlibuv_LICENSE
-cp Utilities/cmzlib/Copyright.txt %{buildroot}/usr/share/doc/cmake/Utilities_cmzlib_Copyright.txt
+mkdir -p %{buildroot}/usr/share/package-licenses/cmake
+cp Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Copyright.txt
+cp Source/kwsys/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Source_kwsys_Copyright.txt
+cp Utilities/GitSetup/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_GitSetup_LICENSE
+cp Utilities/KWIML/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Utilities_KWIML_Copyright.txt
+cp Utilities/cmbzip2/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmbzip2_LICENSE
+cp Utilities/cmcompress/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmcompress_Copyright.txt
+cp Utilities/cmcurl/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmcurl_COPYING
+cp Utilities/cmexpat/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmexpat_COPYING
+cp Utilities/cmjsoncpp/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmjsoncpp_LICENSE
+cp Utilities/cmlibarchive/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmlibarchive_COPYING
+cp Utilities/cmliblzma/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmliblzma_COPYING
+cp Utilities/cmlibrhash/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmlibrhash_COPYING
+cp Utilities/cmlibuv/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmlibuv_LICENSE
+cp Utilities/cmzlib/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmzlib_Copyright.txt
 pushd clr-build
 %make_install
 popd
@@ -2567,28 +2559,25 @@ popd
 /usr/share/cmake-3.12/editors/emacs/cmake-mode.el
 /usr/share/cmake-3.12/editors/vim/indent/cmake.vim
 /usr/share/cmake-3.12/editors/vim/syntax/cmake.vim
+/usr/share/package-licenses/cmake/Copyright.txt
+/usr/share/package-licenses/cmake/Source_kwsys_Copyright.txt
+/usr/share/package-licenses/cmake/Utilities_KWIML_Copyright.txt
+/usr/share/package-licenses/cmake/Utilities_cmcompress_Copyright.txt
+/usr/share/package-licenses/cmake/Utilities_cmzlib_Copyright.txt
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/aclocal/*.m4
 /usr/share/cmake-3.12/include/cmCPluginAPI.h
 
-%files doc
-%defattr(0644,root,root,0755)
-/usr/share/doc/cmake/Copyright.txt
-/usr/share/doc/cmake/Source_kwsys_Copyright.txt
-/usr/share/doc/cmake/Utilities_KWIML_Copyright.txt
-/usr/share/doc/cmake/Utilities_cmcompress_Copyright.txt
-/usr/share/doc/cmake/Utilities_cmzlib_Copyright.txt
-
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/doc/cmake/Utilities_GitSetup_LICENSE
-/usr/share/doc/cmake/Utilities_cmbzip2_LICENSE
-/usr/share/doc/cmake/Utilities_cmcurl_COPYING
-/usr/share/doc/cmake/Utilities_cmexpat_COPYING
-/usr/share/doc/cmake/Utilities_cmjsoncpp_LICENSE
-/usr/share/doc/cmake/Utilities_cmlibarchive_COPYING
-/usr/share/doc/cmake/Utilities_cmliblzma_COPYING
-/usr/share/doc/cmake/Utilities_cmlibrhash_COPYING
-/usr/share/doc/cmake/Utilities_cmlibuv_LICENSE
+/usr/share/package-licenses/cmake/Utilities_GitSetup_LICENSE
+/usr/share/package-licenses/cmake/Utilities_cmbzip2_LICENSE
+/usr/share/package-licenses/cmake/Utilities_cmcurl_COPYING
+/usr/share/package-licenses/cmake/Utilities_cmexpat_COPYING
+/usr/share/package-licenses/cmake/Utilities_cmjsoncpp_LICENSE
+/usr/share/package-licenses/cmake/Utilities_cmlibarchive_COPYING
+/usr/share/package-licenses/cmake/Utilities_cmliblzma_COPYING
+/usr/share/package-licenses/cmake/Utilities_cmlibrhash_COPYING
+/usr/share/package-licenses/cmake/Utilities_cmlibuv_LICENSE
