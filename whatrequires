@@ -27,10 +27,10 @@ darktable
 dfc
 digikam
 dldt
+dmlc-core
 eigen
 fann
 freeglut
-gflags
 glew
 glmark2
 gmic
@@ -45,7 +45,6 @@ libjpeg-turbo-soname8
 librabbitmq
 libssh2
 libzip
-libzmq
 llvm
 llvmlite
 mariadb
@@ -53,6 +52,7 @@ metrics-discovery
 mkl-dnn
 mono
 mpi4py
+mxnet
 ninja
 opencv
 openvpn
@@ -60,7 +60,6 @@ p7zip
 poppler-data
 portaudio
 pugixml
-qtwebengine
 sox
 sundials
 taskwarrior
@@ -70,6 +69,5 @@ tigervnc
 waffle
 webkitgtk
 woff2
-xfce4-whiskermenu-plugin
 yajl
 yasm

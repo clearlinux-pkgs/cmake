@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.12.4
-Release  : 54
+Release  : 55
 URL      : https://cmake.org/files/v3.12/cmake-3.12.4.tar.gz
 Source0  : https://cmake.org/files/v3.12/cmake-3.12.4.tar.gz
 Summary  : library that can create and read several streaming archive formats
@@ -133,7 +133,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541190041
+export SOURCE_DATE_EPOCH=1542391577
 mkdir -p clr-build
 pushd clr-build
 %cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on
@@ -141,7 +141,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1541190041
+export SOURCE_DATE_EPOCH=1542391577
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Copyright.txt
