@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.12.4
-Release  : 55
+Release  : 56
 URL      : https://cmake.org/files/v3.12/cmake-3.12.4.tar.gz
 Source0  : https://cmake.org/files/v3.12/cmake-3.12.4.tar.gz
 Summary  : library that can create and read several streaming archive formats
