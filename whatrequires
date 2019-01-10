@@ -1,10 +1,14 @@
 # This file contains recursive sources that require this package
+FreeCAD
+OpenCASCADE
 R-RInside
 R-qtl
 SuiteSparse
+VTK
 Z3
 apache-hadoop
 beignet
+blender
 brotli
 cargo
 catch2
@@ -21,6 +25,7 @@ compat-llvm-soname5
 compat-llvm-soname6
 compat-opencv-soname32
 compat-opencv-soname33
+compat-opencv-soname34
 compat-protobuf-soname14
 compat-protobuf-soname15
 darktable
@@ -30,7 +35,6 @@ dldt
 dmlc-core
 eigen
 fann
-freeglut
 glew
 glmark2
 gmic
@@ -43,11 +47,8 @@ libcomps
 libconfig
 libjpeg-turbo-soname8
 librabbitmq
-libssh2
 libzip
 llvm
-llvmlite
-mariadb
 metrics-discovery
 mkl-dnn
 mono
@@ -63,8 +64,6 @@ pugixml
 sox
 sundials
 taskwarrior
-tcl
-thunderbolt-software-user-space
 tigervnc
 waffle
 webkitgtk

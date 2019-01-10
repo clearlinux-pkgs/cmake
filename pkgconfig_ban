@@ -6,3 +6,5 @@ ${expected_path}
 blas
 cmakeinternalfakepackage1
 cmakeinternalfakepackage2
+GLOBAL
+cmakeinternalfakepackage
