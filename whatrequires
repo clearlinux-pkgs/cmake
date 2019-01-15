@@ -45,6 +45,7 @@ jsoncpp
 lensfun
 libcomps
 libconfig
+libfprint
 libjpeg-turbo-soname8
 librabbitmq
 libzip
