@@ -2,7 +2,6 @@
 FreeCAD
 OpenCASCADE
 R-RInside
-R-qtl
 SuiteSparse
 VTK
 Z3
@@ -34,6 +33,7 @@ digikam
 dldt
 dmlc-core
 eigen
+embree
 fann
 glew
 glmark2
