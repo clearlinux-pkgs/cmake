@@ -1,7 +1,5 @@
 # This file contains recursive sources that require this package
-FreeCAD
 OpenCASCADE
-R-RInside
 SuiteSparse
 VTK
 Z3
@@ -9,7 +7,6 @@ apache-hadoop
 beignet
 blender
 brotli
-cargo
 catch2
 ceph
 check
@@ -29,7 +26,6 @@ compat-protobuf-soname14
 compat-protobuf-soname15
 darktable
 dfc
-digikam
 dldt
 dmlc-core
 eigen
@@ -39,11 +35,9 @@ glew
 glmark2
 gmic
 httpd
-hyperscan
 irrlicht
 jsoncpp
 lensfun
-libcomps
 libconfig
 libfprint
 libjpeg-turbo-soname8
@@ -53,7 +47,7 @@ llvm
 metrics-discovery
 mkl-dnn
 mono
-mpi4py
+muparser
 mxnet
 ninja
 opencv
@@ -62,9 +56,7 @@ p7zip
 poppler-data
 portaudio
 pugixml
-sox
 sundials
-taskwarrior
 tigervnc
 waffle
 webkitgtk
