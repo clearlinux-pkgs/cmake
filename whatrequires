@@ -42,7 +42,6 @@ libconfig
 libfprint
 libjpeg-turbo-soname8
 librabbitmq
-libzip
 llvm
 metrics-discovery
 mkl-dnn
@@ -53,7 +52,6 @@ ninja
 opencv
 openvpn
 p7zip
-poppler-data
 portaudio
 pugixml
 sundials
