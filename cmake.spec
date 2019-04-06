@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.14.1
-Release  : 61
+Release  : 62
 URL      : https://github.com/Kitware/CMake/releases/download/v3.14.1/cmake-3.14.1.tar.gz
 Source0  : https://github.com/Kitware/CMake/releases/download/v3.14.1/cmake-3.14.1.tar.gz
 Summary  : library that can create and read several streaming archive formats
@@ -136,16 +136,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1553899950
+export SOURCE_DATE_EPOCH=1554528415
 mkdir -p clr-build
 pushd clr-build
 export LDFLAGS="${LDFLAGS} -fno-lto"
-%cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on
+%cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on -DCMAKE_USE_SYSTEM_LIBRARY_BZIP2=on
 make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1553899950
+export SOURCE_DATE_EPOCH=1554528415
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Copyright.txt
