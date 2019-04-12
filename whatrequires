@@ -19,6 +19,7 @@ compat-libical-soname2
 compat-llvm-soname4
 compat-llvm-soname5
 compat-llvm-soname6
+compat-llvm-soname7
 compat-opencv-soname32
 compat-opencv-soname33
 compat-opencv-soname34
@@ -40,7 +41,6 @@ jsoncpp
 lensfun
 libconfig
 libfprint
-libjpeg-turbo-soname8
 librabbitmq
 llvm
 metrics-discovery
