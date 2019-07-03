@@ -3,7 +3,9 @@ OpenCASCADE
 SuiteSparse
 VTK
 Z3
+apache-flink
 apache-hadoop
+arpack-ng
 beignet
 blender
 brotli
@@ -11,7 +13,6 @@ catch2
 ceph
 check
 cmake
-compat-SDL2-soname1
 compat-glew-soname1
 compat-hyperscan-soname4
 compat-libical-soname2
@@ -35,7 +36,6 @@ glew
 glmark2
 gmic
 httpd
-irrlicht
 jsoncpp
 lensfun
 libconfig
@@ -56,7 +56,6 @@ pugixml
 sundials
 supertuxkart
 tigervnc
-waffle
 webkitgtk
 woff2
 yajl

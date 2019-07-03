@@ -4,10 +4,10 @@
 #
 Name     : cmake
 Version  : 3.14.5
-Release  : 67
+Release  : 68
 URL      : https://github.com/Kitware/CMake/releases/download/v3.14.5/cmake-3.14.5.tar.gz
 Source0  : https://github.com/Kitware/CMake/releases/download/v3.14.5/cmake-3.14.5.tar.gz
-Summary  : A cross-platform open-source make system
+Summary  : library that can create and read several streaming archive formats
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause BSD-4-Clause-UC GPL-2.0 MIT Zlib bzip2-1.0.5
 Requires: cmake-bin = %{version}-%{release}
@@ -35,6 +35,7 @@ BuildRequires : googletest-dev
 BuildRequires : gsl-dev
 BuildRequires : gtk+-dev
 BuildRequires : icu4c-dev
+BuildRequires : jsoncpp-dev
 BuildRequires : libX11-dev libICE-dev libSM-dev libXau-dev libXcomposite-dev libXcursor-dev libXdamage-dev libXdmcp-dev libXext-dev libXfixes-dev libXft-dev libXi-dev libXinerama-dev libXi-dev libXmu-dev libXpm-dev libXrandr-dev libXrender-dev libXres-dev libXScrnSaver-dev libXt-dev libXtst-dev libXv-dev libXxf86misc-dev libXxf86vm-dev
 BuildRequires : libarchive-dev
 BuildRequires : libjpeg-turbo-dev
@@ -84,13 +85,10 @@ Patch1: build.patch
 Patch2: fix-x11.patch
 
 %description
-ZLIB DATA COMPRESSION LIBRARY
-zlib 1.2.3 is a general purpose data compression library.  All the code is
-thread safe.  The data format used by the zlib library is described by RFCs
-(Request for Comments) 1950 to 1952 in the files
-http://www.ietf.org/rfc/rfc1950.txt (zlib format), rfc1951.txt (deflate format)
-and rfc1952.txt (gzip format). These documents are also available in other
-formats from ftp://ftp.uu.net/graphics/png/documents/zlib/zdoc-index.html
+This version is fully compatible with the previous public releases.
+------------------------------------------------------------------
+This file is part of bzip2/libbzip2, a program and library for
+lossless, block-sorting data compression.
 
 %package bin
 Summary: bin components for the cmake package.
@@ -117,7 +115,6 @@ Requires: cmake-bin = %{version}-%{release}
 Requires: cmake-data = %{version}-%{release}
 Provides: cmake-devel = %{version}-%{release}
 Requires: cmake = %{version}-%{release}
-Requires: cmake = %{version}-%{release}
 
 %description dev
 dev components for the cmake package.
@@ -140,10 +137,11 @@ license components for the cmake package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559487132
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562114543
 mkdir -p clr-build
 pushd clr-build
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -151,12 +149,12 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-%cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=on -DCMAKE_USE_SYSTEM_ZLIB=on -DCMAKE_USE_SYSTEM_LIBRARY_BZIP2=on
-make  %{?_smp_mflags}
+%cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON  -DCMAKE_USE_SYSTEM_CURL=ON -DCMAKE_USE_SYSTEM_ZLIB=ON -DCMAKE_USE_SYSTEM_LIBRARY_BZIP2=ON -DCMAKE_USE_SYSTEM_LIBRARY_LIBARCHIVE=ON -DCMAKE_USE_SYSTEM_LIBRARY_JSONCPP=ON
+make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1559487132
+export SOURCE_DATE_EPOCH=1562114543
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Copyright.txt
@@ -181,8 +179,6 @@ popd
 %defattr(-,root,root,-)
 /usr/doc/cmake-3.14/Copyright.txt
 /usr/doc/cmake-3.14/cmcompress/Copyright.txt
-/usr/doc/cmake-3.14/cmlibarchive/COPYING
-/usr/doc/cmake-3.14/cmliblzma/COPYING
 /usr/doc/cmake-3.14/cmlibrhash/COPYING
 /usr/doc/cmake-3.14/cmlibrhash/README
 /usr/doc/cmake-3.14/cmlibuv/LICENSE

@@ -4,6 +4,8 @@
 # desirable. One name per line, no whitespace.
 bzip2-dev
 expat-dev
+jsoncpp-dev
+libarchive-dev
 ncurses-dev
 xz-dev
 zlib-dev
