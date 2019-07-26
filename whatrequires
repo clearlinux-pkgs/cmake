@@ -15,7 +15,6 @@ check
 cmake
 compat-glew-soname1
 compat-hyperscan-soname4
-compat-libical-soname2
 compat-llvm-soname4
 compat-llvm-soname5
 compat-llvm-soname6
