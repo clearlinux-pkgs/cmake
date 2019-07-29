@@ -4,10 +4,10 @@
 #
 Name     : cmake
 Version  : 3.15.1
-Release  : 69
+Release  : 70
 URL      : https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
 Source0  : https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
-Summary  : library that can create and read several streaming archive formats
+Summary  : General purpose data compression library
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause GPL-2.0 MIT Zlib bzip2-1.0.5
 Requires: cmake-bin = %{version}-%{release}
@@ -16,13 +16,10 @@ Requires: cmake-license = %{version}-%{release}
 BuildRequires : SDL-dev
 BuildRequires : Vulkan-Headers-dev Vulkan-Loader-dev Vulkan-Tools
 BuildRequires : alsa-lib-dev
-BuildRequires : apache-ant
 BuildRequires : bash coreutils gzip
-BuildRequires : beignet-dev
 BuildRequires : bison-dev
 BuildRequires : boost-dev
 BuildRequires : buildreq-cmake
-BuildRequires : buildreq-mvn
 BuildRequires : bzip2-dev
 BuildRequires : cmake
 BuildRequires : cups-dev
@@ -49,8 +46,9 @@ BuildRequires : lua-dev
 BuildRequires : mesa-dev
 BuildRequires : ncurses-dev
 BuildRequires : openblas
-BuildRequires : openjdk11
-BuildRequires : openjdk11-dev
+BuildRequires : opencl-headers-dev
+BuildRequires : openjdk9
+BuildRequires : openjdk9-dev
 BuildRequires : openmpi-dev
 BuildRequires : openssl-dev
 BuildRequires : patch
@@ -89,10 +87,13 @@ Patch1: build.patch
 Patch2: fix-x11.patch
 
 %description
-This version is fully compatible with the previous public releases.
-------------------------------------------------------------------
-This file is part of bzip2/libbzip2, a program and library for
-lossless, block-sorting data compression.
+Kitware Local Git Setup Scripts
+Introduction
+------------
+This is a collection of local Git development setup scripts meant for
+inclusion in project source trees to aid their development workflow.
+Project-specific information needed by the scripts may be configured
+in a "config" file added next to them in the project.
 
 %package bin
 Summary: bin components for the cmake package.
@@ -142,7 +143,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564174275
+export SOURCE_DATE_EPOCH=1564424365
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -158,7 +159,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1564174275
+export SOURCE_DATE_EPOCH=1564424365
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Copyright.txt

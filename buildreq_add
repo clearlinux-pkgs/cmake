@@ -9,3 +9,4 @@ libarchive-dev
 ncurses-dev
 xz-dev
 zlib-dev
+opencl-headers-dev
