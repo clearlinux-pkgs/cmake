@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.15.1
-Release  : 70
+Release  : 71
 URL      : https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
 Source0  : https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
 Summary  : General purpose data compression library
