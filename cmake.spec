@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.15.4
-Release  : 76
+Release  : 77
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.15.4/cmake-v3.15.4.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.15.4/cmake-v3.15.4.tar.gz
 Summary  : A cross-platform open-source make system
@@ -16,12 +16,10 @@ Requires: cmake-license = %{version}-%{release}
 BuildRequires : SDL-dev
 BuildRequires : Vulkan-Headers-dev Vulkan-Loader-dev Vulkan-Tools
 BuildRequires : alsa-lib-dev
-BuildRequires : apache-ant
 BuildRequires : bash coreutils gzip
 BuildRequires : bison-dev
 BuildRequires : boost-dev
 BuildRequires : buildreq-cmake
-BuildRequires : buildreq-mvn
 BuildRequires : bzip2-dev
 BuildRequires : cmake
 BuildRequires : cups-dev
@@ -145,7 +143,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570066228
+export SOURCE_DATE_EPOCH=1571253341
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -161,22 +159,22 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1570066228
+export SOURCE_DATE_EPOCH=1571253341
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
-cp Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Copyright.txt
-cp Source/kwsys/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Source_kwsys_Copyright.txt
-cp Utilities/KWIML/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Utilities_KWIML_Copyright.txt
-cp Utilities/cmbzip2/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmbzip2_LICENSE
-cp Utilities/cmcurl/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmcurl_COPYING
-cp Utilities/cmexpat/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmexpat_COPYING
-cp Utilities/cmjsoncpp/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmjsoncpp_LICENSE
-cp Utilities/cmlibarchive/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmlibarchive_COPYING
-cp Utilities/cmliblzma/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmliblzma_COPYING
-cp Utilities/cmlibrhash/COPYING %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmlibrhash_COPYING
-cp Utilities/cmlibuv/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmlibuv_LICENSE
-cp Utilities/cmzlib/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmzlib_Copyright.txt
-cp Utilities/cmzstd/LICENSE %{buildroot}/usr/share/package-licenses/cmake/Utilities_cmzstd_LICENSE
+cp %{_builddir}/cmake-v3.15.4/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/ef5e9cd05a459b23263ecc409da2b3bc51aec2e4
+cp %{_builddir}/cmake-v3.15.4/Source/kwsys/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/5f78f21af8c8d27e0335d335a9dc9560bcc6f024
+cp %{_builddir}/cmake-v3.15.4/Utilities/KWIML/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/c18d58e8f2d8b07033608fc1aa496350dc7404a6
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmbzip2/LICENSE %{buildroot}/usr/share/package-licenses/cmake/d964dbe91cbf7511e4f1857db9e99fdaf6658055
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmcurl/COPYING %{buildroot}/usr/share/package-licenses/cmake/2b73f04c727a998f71fe2b2fbca3fa2d422b9018
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmexpat/COPYING %{buildroot}/usr/share/package-licenses/cmake/1830cf88edd943aadba8ca7504d45113ca3431a2
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmjsoncpp/LICENSE %{buildroot}/usr/share/package-licenses/cmake/d9bddd7f273bd065b5fdeb67afac0b26b6541a50
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmlibarchive/COPYING %{buildroot}/usr/share/package-licenses/cmake/6d7ca4cf29b60cc841554382420bb4bdc47e64ca
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmliblzma/COPYING %{buildroot}/usr/share/package-licenses/cmake/66933e63e70616b43f1dc60340491f8e050eedfd
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmlibrhash/COPYING %{buildroot}/usr/share/package-licenses/cmake/50aa3a8f4191551e1a81c7690ede1da6b4939f51
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmlibuv/LICENSE %{buildroot}/usr/share/package-licenses/cmake/848f7398f89046426a7ba23cb56cd3c93c030c64
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmzlib/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/eb7245cf0073b6f9dd00f6a98d63cda506f72714
+cp %{_builddir}/cmake-v3.15.4/Utilities/cmzstd/LICENSE %{buildroot}/usr/share/package-licenses/cmake/c4130945ca3d1f8ea4a3e8af36d3c18b2232116c
 pushd clr-build
 %make_install
 popd
@@ -2790,16 +2788,16 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/cmake/Copyright.txt
-/usr/share/package-licenses/cmake/Source_kwsys_Copyright.txt
-/usr/share/package-licenses/cmake/Utilities_KWIML_Copyright.txt
-/usr/share/package-licenses/cmake/Utilities_cmbzip2_LICENSE
-/usr/share/package-licenses/cmake/Utilities_cmcurl_COPYING
-/usr/share/package-licenses/cmake/Utilities_cmexpat_COPYING
-/usr/share/package-licenses/cmake/Utilities_cmjsoncpp_LICENSE
-/usr/share/package-licenses/cmake/Utilities_cmlibarchive_COPYING
-/usr/share/package-licenses/cmake/Utilities_cmliblzma_COPYING
-/usr/share/package-licenses/cmake/Utilities_cmlibrhash_COPYING
-/usr/share/package-licenses/cmake/Utilities_cmlibuv_LICENSE
-/usr/share/package-licenses/cmake/Utilities_cmzlib_Copyright.txt
-/usr/share/package-licenses/cmake/Utilities_cmzstd_LICENSE
+/usr/share/package-licenses/cmake/1830cf88edd943aadba8ca7504d45113ca3431a2
+/usr/share/package-licenses/cmake/2b73f04c727a998f71fe2b2fbca3fa2d422b9018
+/usr/share/package-licenses/cmake/50aa3a8f4191551e1a81c7690ede1da6b4939f51
+/usr/share/package-licenses/cmake/5f78f21af8c8d27e0335d335a9dc9560bcc6f024
+/usr/share/package-licenses/cmake/66933e63e70616b43f1dc60340491f8e050eedfd
+/usr/share/package-licenses/cmake/6d7ca4cf29b60cc841554382420bb4bdc47e64ca
+/usr/share/package-licenses/cmake/848f7398f89046426a7ba23cb56cd3c93c030c64
+/usr/share/package-licenses/cmake/c18d58e8f2d8b07033608fc1aa496350dc7404a6
+/usr/share/package-licenses/cmake/c4130945ca3d1f8ea4a3e8af36d3c18b2232116c
+/usr/share/package-licenses/cmake/d964dbe91cbf7511e4f1857db9e99fdaf6658055
+/usr/share/package-licenses/cmake/d9bddd7f273bd065b5fdeb67afac0b26b6541a50
+/usr/share/package-licenses/cmake/eb7245cf0073b6f9dd00f6a98d63cda506f72714
+/usr/share/package-licenses/cmake/ef5e9cd05a459b23263ecc409da2b3bc51aec2e4

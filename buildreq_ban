@@ -4,3 +4,5 @@
 #
 gnuplot-dev
 beignet-dev
+apache-ant
+buildreq-mvn

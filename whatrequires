@@ -1,7 +1,6 @@
 # This file contains recursive sources that require this package
 OpenCASCADE
 RawTherapee
-SuiteSparse
 VTK
 apache-flink
 arpack-ng
@@ -14,7 +13,6 @@ compat-llvm-soname6
 compat-llvm-soname7
 compat-opencv-soname32
 compat-opencv-soname33
-compat-opencv-soname34
 darktable
 dfc
 digikam
@@ -47,5 +45,4 @@ supertuxkart
 tigervnc
 webkitgtk
 woff2
-yajl
 yasm
