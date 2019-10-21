@@ -28,6 +28,7 @@ jsoncpp
 lensfun
 libconfig
 libfprint
+librealsense
 llvm
 metrics-discovery
 mkl-dnn

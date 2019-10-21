@@ -2,7 +2,9 @@
 # This file contains banned pkgconfig build requirements that get picked up but are 
 # undesireable desirable. One name per line, no whitespace.
 #
-gnuplot-dev
-beignet-dev
 apache-ant
+beignet-dev
 buildreq-mvn
+gnuplot-dev
+openjdk11
+openjdk11-dev

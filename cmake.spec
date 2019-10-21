@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.15.4
-Release  : 77
+Release  : 78
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.15.4/cmake-v3.15.4.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.15.4/cmake-v3.15.4.tar.gz
 Summary  : A cross-platform open-source make system
@@ -47,8 +47,6 @@ BuildRequires : mesa-dev
 BuildRequires : ncurses-dev
 BuildRequires : openblas
 BuildRequires : opencl-headers-dev
-BuildRequires : openjdk11
-BuildRequires : openjdk11-dev
 BuildRequires : openmpi-dev
 BuildRequires : openssl-dev
 BuildRequires : patch
@@ -80,6 +78,7 @@ BuildRequires : tcl
 BuildRequires : tcl-dev tk-dev
 BuildRequires : texlive
 BuildRequires : tiff-dev
+BuildRequires : util-linux
 BuildRequires : wget
 BuildRequires : xz-dev
 BuildRequires : zlib-dev
@@ -143,7 +142,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571253341
+export SOURCE_DATE_EPOCH=1571689632
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -159,7 +158,7 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1571253341
+export SOURCE_DATE_EPOCH=1571689632
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v3.15.4/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/ef5e9cd05a459b23263ecc409da2b3bc51aec2e4
