@@ -1,5 +1,6 @@
 # This file contains recursive sources that require this package
 OpenCASCADE
+ParaView
 RawTherapee
 VTK
 apache-flink
@@ -26,7 +27,6 @@ gmic
 httpd
 jsoncpp
 lensfun
-libconfig
 libfprint
 librealsense
 llvm
