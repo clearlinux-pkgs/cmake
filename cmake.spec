@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.16.0
-Release  : 81
+Release  : 82
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.16.0/cmake-v3.16.0.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.16.0/cmake-v3.16.0.tar.gz
 Summary  : A cross-platform open-source make system
