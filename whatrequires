@@ -12,12 +12,12 @@ ceph
 cmake
 compat-llvm-soname6
 compat-llvm-soname7
-compat-opencv-soname32
-compat-opencv-soname33
+compat-opencv-soname41
 darktable
 dfc
 digikam
 dldt
+dlib
 dmlc-core
 eigen
 embree
@@ -30,7 +30,6 @@ lensfun
 libfprint
 librealsense
 llvm
-metrics-discovery
 mkl-dnn
 mono
 muparser
