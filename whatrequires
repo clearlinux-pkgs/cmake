@@ -22,7 +22,6 @@ dmlc-core
 eigen
 embree
 fann
-glew
 gmic
 httpd
 jsoncpp
