@@ -11,7 +11,6 @@ catch2
 ceph
 cmake
 compat-llvm-soname6
-compat-llvm-soname7
 compat-opencv-soname41
 darktable
 dfc
@@ -27,6 +26,7 @@ httpd
 jsoncpp
 lensfun
 libfprint
+libopenshot
 librealsense
 llvm
 mkl-dnn
@@ -40,6 +40,7 @@ portaudio
 pugixml
 sundials
 supertuxkart
+symengine
 tigervnc
 webkitgtk
 woff2
