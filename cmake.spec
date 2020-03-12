@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.16.5
-Release  : 89
+Release  : 90
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.16.5/cmake-v3.16.5.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.16.5/cmake-v3.16.5.tar.gz
 Summary  : A cross-platform open-source make system
