@@ -1,9 +1,7 @@
 # This file contains recursive sources that require this package
 OpenCASCADE
-ParaView
 RawTherapee
 VTK
-apache-flink
 arpack-ng
 blender
 brotli
@@ -22,6 +20,7 @@ eigen
 embree
 fann
 gmic
+gmsh
 httpd
 jsoncpp
 lensfun
@@ -30,7 +29,6 @@ libopenshot
 librealsense
 llvm
 mkl-dnn
-mono
 muparser
 mxnet
 ngraph
