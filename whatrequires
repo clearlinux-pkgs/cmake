@@ -27,7 +27,6 @@ lensfun
 libfprint
 libopenshot
 librealsense
-llvm
 mkl-dnn
 muparser
 mxnet
