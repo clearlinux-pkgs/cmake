@@ -10,3 +10,4 @@ GLOBAL
 cmakeinternalfakepackage
 bletch
 fakelinkoptionspackage
+bletch-framework
