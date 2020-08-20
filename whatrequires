@@ -8,7 +8,6 @@ brotli
 catch2
 ceph
 cmake
-compat-opencv-soname41
 compat-opencv-soname42
 darktable
 dfc
