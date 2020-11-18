@@ -9,7 +9,6 @@ ceph
 cmake
 compat-opencv-soname42
 darktable
-dfc
 digikam
 dmlc-core
 eigen
@@ -27,11 +26,7 @@ muparser
 mxnet
 opencv
 openvpn
-portaudio
-pugixml
 sundials
 supertuxkart
 tigervnc
 webkitgtk
-woff2
-yasm
