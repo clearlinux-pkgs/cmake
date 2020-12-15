@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.19.1
-Release  : 103
+Release  : 104
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.19.1/cmake-v3.19.1.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.19.1/cmake-v3.19.1.tar.gz
 Summary  : A cross-platform open-source make system
