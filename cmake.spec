@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.19.5
-Release  : 109
+Release  : 110
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.19.5/cmake-v3.19.5.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.19.5/cmake-v3.19.5.tar.gz
 Summary  : A cross-platform open-source make system
@@ -48,7 +48,6 @@ BuildRequires : libpng-dev
 BuildRequires : libssh-dev
 BuildRequires : libxml2-dev
 BuildRequires : libxslt-dev
-BuildRequires : lua-dev
 BuildRequires : mesa-dev
 BuildRequires : ncurses-dev
 BuildRequires : openblas
@@ -153,7 +152,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1613488893
+export SOURCE_DATE_EPOCH=1613695628
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -169,7 +168,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1613488893
+export SOURCE_DATE_EPOCH=1613695628
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v3.19.5/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/ae550eff6899c80386267aaaef38f4ff3ba65fad

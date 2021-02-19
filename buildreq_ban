@@ -4,5 +4,6 @@ apache-ant
 beignet-dev
 buildreq-mvn
 gnuplot-dev
+lua-dev
 openjdk11
 openjdk11-dev
