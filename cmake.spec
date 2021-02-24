@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.19.5
-Release  : 110
+Release  : 111
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.19.5/cmake-v3.19.5.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.19.5/cmake-v3.19.5.tar.gz
 Summary  : A cross-platform open-source make system
@@ -41,7 +41,7 @@ BuildRequires : gtk+-dev
 BuildRequires : hdf5-dev
 BuildRequires : icu4c-dev
 BuildRequires : jsoncpp-dev
-BuildRequires : libX11-dev libICE-dev libSM-dev libXau-dev libXcomposite-dev libXcursor-dev libXdamage-dev libXdmcp-dev libXext-dev libXfixes-dev libXft-dev libXi-dev libXinerama-dev libXi-dev libXmu-dev libXpm-dev libXrandr-dev libXrender-dev libXres-dev libXScrnSaver-dev libXt-dev libXtst-dev libXv-dev libXxf86misc-dev libXxf86vm-dev
+BuildRequires : libX11-dev libICE-dev libSM-dev libXau-dev libXcomposite-dev libXcursor-dev libXdamage-dev libXdmcp-dev libXext-dev libXfixes-dev libXft-dev libXi-dev libXinerama-dev libXi-dev libXmu-dev libXpm-dev libXrandr-dev libXrender-dev libXres-dev libXScrnSaver-dev libXt-dev libXtst-dev libXv-dev libXxf86vm-dev
 BuildRequires : libarchive-dev
 BuildRequires : libjpeg-turbo-dev
 BuildRequires : libpng-dev
