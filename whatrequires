@@ -4,10 +4,8 @@ RawTherapee
 VTK
 arpack-ng
 blender
-brotli
 ceph
 cmake
-compat-opencv-soname42
 darktable
 digikam
 dmlc-core
@@ -25,7 +23,6 @@ mkl-dnn
 muparser
 mxnet
 opencv
-openvpn
 sundials
 supertuxkart
 tigervnc
