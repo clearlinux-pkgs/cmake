@@ -19,6 +19,7 @@ inkscape
 jsoncpp
 lensfun
 librealsense
+lttng-ust
 mkl-dnn
 muparser
 mxnet
