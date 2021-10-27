@@ -6,6 +6,7 @@ arpack-ng
 blender
 ceph
 cmake
+compat-webkitgtk-soname40
 darktable
 digikam
 dmlc-core
