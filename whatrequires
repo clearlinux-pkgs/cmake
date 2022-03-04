@@ -20,6 +20,8 @@ inkscape
 jsoncpp
 lensfun
 librealsense
+llvm
+llvm12
 mkl-dnn
 muparser
 opencv
