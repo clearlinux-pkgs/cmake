@@ -23,10 +23,12 @@ lensfun
 librealsense
 llvm
 llvm12
+llvm13
 mkl-dnn
 muparser
 opencv
 qt6base
+rustc
 sundials
 supertuxkart
 tigervnc
