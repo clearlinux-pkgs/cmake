@@ -24,6 +24,7 @@ librealsense
 llvm
 llvm12
 llvm13
+llvm14
 mkl-dnn
 muparser
 opencv
