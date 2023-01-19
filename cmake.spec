@@ -4,7 +4,7 @@
 #
 Name     : cmake
 Version  : 3.25.2
-Release  : 141
+Release  : 142
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.25.2/cmake-v3.25.2.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.25.2/cmake-v3.25.2.tar.gz
 Summary  : A cross-platform open-source make system
