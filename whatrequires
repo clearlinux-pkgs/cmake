@@ -29,8 +29,10 @@ llvm14
 mkl-dnn
 muparser
 opencv
+pytorch
 qt6base
 rustc
+spice-gtk
 sundials
 supertuxkart
 tigervnc
