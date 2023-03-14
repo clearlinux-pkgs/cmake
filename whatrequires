@@ -29,6 +29,7 @@ llvm14
 mkl-dnn
 muparser
 opencv
+pypi-sentencepiece
 pytorch
 qt6base
 rustc
