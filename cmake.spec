@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : cmake
-Version  : 3.26.2
-Release  : 146
-URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.2/cmake-v3.26.2.tar.gz
-Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.2/cmake-v3.26.2.tar.gz
+Version  : 3.26.3
+Release  : 147
+URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.3/cmake-v3.26.3.tar.gz
+Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.3/cmake-v3.26.3.tar.gz
 Summary  : A cross-platform open-source make system
 Group    : Development/Tools
 License  : 0BSD BSD-2-Clause BSD-3-Clause GPL-2.0 MIT bzip2-1.0.6
@@ -154,8 +154,8 @@ license components for the cmake package.
 
 
 %prep
-%setup -q -n cmake-v3.26.2
-cd %{_builddir}/cmake-v3.26.2
+%setup -q -n cmake-v3.26.3
+cd %{_builddir}/cmake-v3.26.3
 %patch1 -p1
 %patch2 -p1
 
@@ -167,7 +167,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680131123
+export SOURCE_DATE_EPOCH=1680650695
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -189,7 +189,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1680131123
+export SOURCE_DATE_EPOCH=1680650695
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v%{version}/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/d8969c402f7a24729c2cf988628f701668cab342 || :

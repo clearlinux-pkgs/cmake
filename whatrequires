@@ -17,6 +17,7 @@ gmic
 gmsh
 httpd
 inkscape
+irssi
 jsoncpp
 keepassxc
 kirigami2
@@ -26,10 +27,12 @@ llvm
 llvm12
 llvm13
 llvm14
+llvm15
 mkl-dnn
 muparser
 opencv
 pypi-sentencepiece
+pypi-xgboost
 pytorch
 qt6base
 rustc
