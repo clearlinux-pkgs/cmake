@@ -5,7 +5,7 @@
 #
 Name     : cmake
 Version  : 3.26.3
-Release  : 147
+Release  : 148
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.3/cmake-v3.26.3.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.3/cmake-v3.26.3.tar.gz
 Summary  : A cross-platform open-source make system
@@ -167,17 +167,43 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680650695
+export SOURCE_DATE_EPOCH=1683653023
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+%cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON \
+-DCMAKE_USE_SYSTEM_CURL=ON \
+-DCMAKE_USE_SYSTEM_ZLIB=ON \
+-DCMAKE_USE_SYSTEM_LIBRARY_BZIP2=ON \
+-DCMAKE_USE_SYSTEM_LIBRARY_LIBARCHIVE=ON \
+-DCMAKE_USE_SYSTEM_LIBRARY_JSONCPP=ON \
+-DCMAKE_DOC_DIR=share/doc/cmake
+make  %{?_smp_mflags}
+popd
+mkdir -p clr-build-avx2
+pushd clr-build-avx2
+## build_prepend content
+export TMPDIR=/var/tmp
+## build_prepend end
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export FCFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export FFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export CXXFLAGS="$CXXFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export CFLAGS="$CFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export CXXFLAGS="$CXXFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FFLAGS="$FFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FCFLAGS="$FCFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
 %cmake .. -DCMAKE_USE_SYSTEM_EXPAT=ON \
 -DCMAKE_USE_SYSTEM_CURL=ON \
 -DCMAKE_USE_SYSTEM_ZLIB=ON \
@@ -189,7 +215,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1680650695
+export SOURCE_DATE_EPOCH=1683653023
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v%{version}/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/d8969c402f7a24729c2cf988628f701668cab342 || :
@@ -205,15 +231,23 @@ cp %{_builddir}/cmake-v%{version}/Utilities/cmlibrhash/COPYING %{buildroot}/usr/
 cp %{_builddir}/cmake-v%{version}/Utilities/cmlibuv/LICENSE %{buildroot}/usr/share/package-licenses/cmake/995532b42e0ad16d5ee90d1538f3d74a91fa76e6 || :
 cp %{_builddir}/cmake-v%{version}/Utilities/cmnghttp2/COPYING %{buildroot}/usr/share/package-licenses/cmake/7f6f3c0c08925232459e499d66231cb5da01d811 || :
 cp %{_builddir}/cmake-v%{version}/Utilities/cmzstd/LICENSE %{buildroot}/usr/share/package-licenses/cmake/c4130945ca3d1f8ea4a3e8af36d3c18b2232116c || :
+pushd clr-build-avx2
+%make_install_v3  || :
+popd
 pushd clr-build
 %make_install
 popd
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
 
 %files bin
 %defattr(-,root,root,-)
+/V3/usr/bin/ccmake
+/V3/usr/bin/cmake
+/V3/usr/bin/cpack
+/V3/usr/bin/ctest
 /usr/bin/ccmake
 /usr/bin/cmake
 /usr/bin/cpack
@@ -3399,7 +3433,7 @@ popd
 
 %files doc
 %defattr(0644,root,root,0755)
-%doc /usr/share/doc/cmake/*
+/usr/share/doc/cmake/*
 
 %files license
 %defattr(0644,root,root,0755)
