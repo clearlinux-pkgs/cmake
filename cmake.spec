@@ -5,7 +5,7 @@
 #
 Name     : cmake
 Version  : 3.26.4
-Release  : 150
+Release  : 151
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.4/cmake-v3.26.4.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.26.4/cmake-v3.26.4.tar.gz
 Summary  : A cross-platform open-source make system
@@ -167,7 +167,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684508103
+export SOURCE_DATE_EPOCH=1685491080
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -215,7 +215,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684508103
+export SOURCE_DATE_EPOCH=1685491080
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v%{version}/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/d8969c402f7a24729c2cf988628f701668cab342 || :
