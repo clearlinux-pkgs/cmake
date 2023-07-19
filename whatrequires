@@ -4,8 +4,8 @@ RawTherapee
 VTK
 arpack-ng
 blender
-ceph
 cmake
+compat-tiff-soname5
 darktable
 digikam
 dmlc-core
@@ -26,6 +26,7 @@ llvm
 llvm12
 llvm14
 llvm15
+lttng-ust
 mkl-dnn
 muparser
 opencv
@@ -37,6 +38,7 @@ rustc
 spice-gtk
 sundials
 supertuxkart
+tiff
 tigervnc
 webkitgtk
 webkitgtk60
