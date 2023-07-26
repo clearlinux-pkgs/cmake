@@ -23,7 +23,6 @@ kirigami2
 lensfun
 librealsense
 llvm
-llvm12
 llvm14
 llvm15
 lttng-ust
