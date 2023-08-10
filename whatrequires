@@ -1,5 +1,6 @@
 # This file contains recursive sources that require this package
 OpenCASCADE
+PDAL
 RawTherapee
 VTK
 arpack-ng
