@@ -24,6 +24,7 @@ librealsense
 llvm
 llvm14
 llvm15
+llvm16
 lttng-ust
 mkl-dnn
 muparser
