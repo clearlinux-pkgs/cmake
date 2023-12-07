@@ -7,7 +7,7 @@
 #
 Name     : cmake
 Version  : 3.28.0
-Release  : 162
+Release  : 163
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.28.0/cmake-v3.28.0.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.28.0/cmake-v3.28.0.tar.gz
 Summary  : A cross-platform open-source make system
@@ -169,7 +169,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1701892700
+export SOURCE_DATE_EPOCH=1701944024
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -243,7 +243,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1701892700
+export SOURCE_DATE_EPOCH=1701944024
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v%{version}/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/d8969c402f7a24729c2cf988628f701668cab342 || :
