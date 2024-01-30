@@ -1,13 +1,14 @@
 # This file contains recursive sources that require this package
-OpenCASCADE
 PDAL
 RawTherapee
 VTK
+blender
 cmake
 compat-tiff-soname5
 darktable
 digikam
 dmlc-core
+dpcpp-compiler
 eigen
 embree
 fann
@@ -28,6 +29,7 @@ llvm16
 lttng-ust
 mkl-dnn
 muparser
+oneDPL
 opencv
 pypi-onnx
 pypi-sentencepiece
