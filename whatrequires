@@ -7,6 +7,7 @@ cmake
 compat-tiff-soname5
 darktable
 digikam
+dlib
 dmlc-core
 dpcpp-compiler
 eigen
@@ -19,6 +20,7 @@ inkscape
 irssi
 jsoncpp
 keepassxc
+kirigami
 kirigami2
 lensfun
 librealsense
@@ -35,6 +37,7 @@ pypi-onnx
 pypi-sentencepiece
 pypi-xgboost
 pytorch
+qt6quick3d
 rustc
 spice-gtk
 sundials
