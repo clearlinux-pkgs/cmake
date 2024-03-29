@@ -7,7 +7,7 @@
 #
 Name     : cmake
 Version  : 3.29.0
-Release  : 169
+Release  : 170
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.29.0/cmake-v3.29.0.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.29.0/cmake-v3.29.0.tar.gz
 Summary  : A cross-platform open-source make system
@@ -92,7 +92,6 @@ BuildRequires : tcl-dev tk-dev
 BuildRequires : texlive
 BuildRequires : tiff-dev
 BuildRequires : wget
-BuildRequires : xz-dev
 BuildRequires : zlib-dev
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -169,7 +168,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711746229
+export SOURCE_DATE_EPOCH=1711747835
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -245,7 +244,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711746229
+export SOURCE_DATE_EPOCH=1711747835
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v%{version}/Source/kwsys/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/5f78f21af8c8d27e0335d335a9dc9560bcc6f024 || :
