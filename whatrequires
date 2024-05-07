@@ -34,6 +34,7 @@ muparser
 oneDPL
 opencv
 pypi-onnx
+pypi-pyzmq
 pypi-sentencepiece
 pypi-xgboost
 pytorch
