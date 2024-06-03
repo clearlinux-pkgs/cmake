@@ -33,6 +33,7 @@ mkl-dnn
 muparser
 oneDPL
 opencv
+protobuf
 pypi-onnx
 pypi-pyzmq
 pypi-sentencepiece
