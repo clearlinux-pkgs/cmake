@@ -7,7 +7,7 @@
 #
 Name     : cmake
 Version  : 3.30.3
-Release  : 180
+Release  : 181
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.30.3/cmake-v3.30.3.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.30.3/cmake-v3.30.3.tar.gz
 Summary  : A cross-platform open-source make system
