@@ -2,6 +2,7 @@
 PDAL
 RawTherapee
 VTK
+apache-arrow
 blender
 cmake
 compat-tiff-soname5
@@ -18,7 +19,6 @@ gmsh
 httpd
 inkscape
 irssi
-jsoncpp
 keepassxc
 kirigami
 kirigami2
@@ -28,6 +28,8 @@ llvm
 llvm14
 llvm15
 llvm16
+llvm17
+llvm18
 lttng-ust
 mkl-dnn
 muparser
