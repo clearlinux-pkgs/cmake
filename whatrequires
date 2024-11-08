@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 PDAL
 RawTherapee
+SuiteSparse
 VTK
 apache-arrow
 blender
@@ -36,6 +37,8 @@ muparser
 oneDPL
 opencv
 protobuf
+pypi-blosc
+pypi-blosc2
 pypi-onnx
 pypi-pyzmq
 pypi-sentencepiece

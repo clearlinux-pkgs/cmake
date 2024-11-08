@@ -14,3 +14,9 @@ zot
 freeglut
 opensp
 liblzma
+libgsasl
+libmsh3
+libngtcp2
+quiche
+rustls
+wolfssl
