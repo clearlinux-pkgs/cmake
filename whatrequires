@@ -33,6 +33,7 @@ llvm17
 llvm18
 lttng-ust
 mkl-dnn
+mono
 muparser
 oneDPL
 opencv
