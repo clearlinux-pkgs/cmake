@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : cmake
-Version  : 3.31.2
-Release  : 188
-URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.31.2/cmake-v3.31.2.tar.gz
-Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.31.2/cmake-v3.31.2.tar.gz
+Version  : 3.31.3
+Release  : 189
+URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.31.3/cmake-v3.31.3.tar.gz
+Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v3.31.3/cmake-v3.31.3.tar.gz
 Summary  : A cross-platform open-source make system
 Group    : Development/Tools
 License  : 0BSD Apache-2.0 BSD-2-Clause BSD-3-Clause GPL-2.0 MIT bzip2-1.0.6
@@ -192,12 +192,12 @@ license components for the cmake package.
 
 
 %prep
-%setup -q -n cmake-v3.31.2
-cd %{_builddir}/cmake-v3.31.2
+%setup -q -n cmake-v3.31.3
+cd %{_builddir}/cmake-v3.31.3
 %patch -P 1 -p1
 %patch -P 2 -p1
 pushd ..
-cp -a cmake-v3.31.2 buildavx2
+cp -a cmake-v3.31.3 buildavx2
 popd
 
 %build
@@ -208,7 +208,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1733830347
+export SOURCE_DATE_EPOCH=1735075688
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -286,7 +286,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1733830347
+export SOURCE_DATE_EPOCH=1735075688
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmake
 cp %{_builddir}/cmake-v%{version}/Source/kwsys/Copyright.txt %{buildroot}/usr/share/package-licenses/cmake/5f78f21af8c8d27e0335d335a9dc9560bcc6f024 || :
