@@ -31,6 +31,7 @@ llvm15
 llvm16
 llvm17
 llvm18
+llvm19
 lttng-ust
 mkl-dnn
 mono
@@ -43,7 +44,6 @@ pypi-blosc2
 pypi-onnx
 pypi-pyzmq
 pypi-sentencepiece
-pypi-xgboost
 pytorch
 qt6quick3d
 rustc
