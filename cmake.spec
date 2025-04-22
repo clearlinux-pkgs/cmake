@@ -7,7 +7,7 @@
 #
 Name     : cmake
 Version  : 4.0.0
-Release  : 193
+Release  : 194
 URL      : https://gitlab.kitware.com/cmake/cmake/-/archive/v4.0.0/cmake-v4.0.0.tar.gz
 Source0  : https://gitlab.kitware.com/cmake/cmake/-/archive/v4.0.0/cmake-v4.0.0.tar.gz
 Summary  : A cross-platform open-source make system
